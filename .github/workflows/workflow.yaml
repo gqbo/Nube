@@ -3,6 +3,8 @@ name: workflow1
 on:
   push:
     branches: ["main"]
+env:
+  TEXT: "Gabriel Gonzalez"
 # pipeline
 jobs:
   print: # job name
@@ -11,4 +13,4 @@ jobs:
 # Ejecutar un print a consola
     steps:
       - name: print-to-screen
-        run: echo "Mi Primer Workflow!"
+        run: echo "Mi Primer Workflow ${{ env.TEXT }}!"
