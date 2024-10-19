@@ -36,4 +36,4 @@ jobs:
           AUTOR=${{ env.TEXT }}
 
     - name: Run test
-      run: docker run --rm --name website -p 3000:3000 ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+      run: docker run -d --rm --name website -p 3000:3000 ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
