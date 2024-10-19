@@ -1,6 +1,7 @@
 FROM nginx
+ARG AUTOR
+ENV ENV_AUTOR=$AUTOR
 WORKDIR /usr/share/nginx/html
 COPY hola.html .
-RUN cp hola.html index.html
-EXPOSE 80
-CMD nginx -g 'daemon off;'
+RUN sed -e s/Docker/"$AUTOR"/ hola.html > index.html ;
+CMD ["nginx", "-g", "daemon off;"]
