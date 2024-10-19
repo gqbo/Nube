@@ -7,8 +7,8 @@ on:
 jobs:
   print: # job name
 # ejecuta el pipeline en una VM Ubuntu
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 # Ejecutar un print a consola
-  steps:
-    - name: print-to-screen
-      run: echo "Mi Primer Workflow!"
+    steps:
+      - name: print-to-screen
+        run: echo "Mi Primer Workflow!"
